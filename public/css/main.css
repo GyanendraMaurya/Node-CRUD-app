@@ -1,0 +1,59 @@
+.article-box{
+        
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+
+        color: #004085;
+        background-color: #cce5ff;
+        border-color: #b8daff; 
+}
+.title-box{
+    
+    
+    
+    box-sizing: border-box;
+    position: relative;
+    top:0;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 70%; 
+    
+}
+.author-box{
+    text-align:right;
+    color: #000061;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 0.75rem 1.25rem;
+    right: 0;
+    top:0;
+    width: 25%;
+     
+}
+.article-title{
+    box-sizing: border-box;
+    width:100;
+    border: 1px solid grey;
+    padding:10px 10px;
+    margin-bottom: 5px;
+    border-radius:3px;
+    text-transform: capitalize;
+    background-color: #eee; 
+    color:rgb(0, 51, 190);
+    background-color: rgb(211, 211, 253);
+    overflow: auto;
+}
+.article-body{
+    box-sizing: border-box;
+    width:100;
+    border: 1px solid grey;
+    padding:10px 10px;
+    margin-bottom: 5px;
+    border-radius:3px;
+    background-color: #eee;
+   
+    
+}

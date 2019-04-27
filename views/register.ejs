@@ -1,0 +1,29 @@
+<%- include('header') %>
+
+<% if(valError){%>
+    <% for(var a in valError){%>
+        <div class="alert alert-danger"><%= valError[a].msg %></div>
+    <%}
+}
+%>
+<h2><%=title %></h2>
+ <form action='/user/add' method="POST">
+        <br/>
+        First Name : <br/>
+        <input type='text' class='form-control' name='firstName'><br/>
+        Last Name : <br/>
+        <input type='text' class='form-control' name='lastName'><br/>
+        Email : <br/>
+        <input type='email' class='form-control' name='email'><br/>
+        Password : <br/>
+        <input type='password' class='form-control' name='password'><br/>
+        Confirm Password : <br/>
+        <input type='password' class='form-control' name='password2'><br/>
+        <button type='submit' class="btn btn-success">Submit</button>
+    </form>
+    </div>
+
+<%- include('footer') %>
+
+
+

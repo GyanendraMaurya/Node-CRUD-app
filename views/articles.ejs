@@ -1,0 +1,14 @@
+<%- include('header') %>
+<p class="h2"><%=title %></p>
+<% for(let i=0;i<article.length; i++){%>
+    <div class='article-box'>
+        <div class="title-box">
+            <a href="/article/<%= article[i]._id%>"><%= article[i].title%></a>
+        </div>
+        <div class="author-box" style="text-transform:capitalize">
+            <%= article[i].author_name%>
+        </div>
+    </div>
+
+<%}%>
+<%- include('footer') %>

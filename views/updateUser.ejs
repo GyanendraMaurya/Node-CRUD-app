@@ -1,0 +1,24 @@
+<%- include('header') %>
+<% if(valError){
+    for(var a in valError){%>
+        <div class="alert alert-danger"><%= valError[a].msg %></div>
+    <%}
+}
+%>
+<h2><%=title %></h2>
+ <form action='/user/update/<%= user._id%>' method="POST">
+        <br/>
+        First Name : <br/>
+        <input type='text' class='form-control' name='firstName' value='<%=user.first_name%>'><br/>
+        Last Name : <br/>
+        <input type='text' class='form-control' name='lastName' value='<%=user.last_name%>'><br/>
+        Email : <br/>
+        <input type='email' class='form-control' name='email' value='<%=user.email%>'><br/>
+        Password : <br/>
+        <input type='password' class='form-control' name='password' value='<%=user.password%>'><br/>
+        Confirm Password : <br/>
+        <input type='password' class='form-control' name='password2' value='<%=user.password%>'><br/>
+        <button type='submit' class="btn btn-success">Update</button>
+        <div class="btn btn-danger delete-user" data-id="<%=user._id%>">Delete</div>
+    </form>
+<%- include('footer') %>

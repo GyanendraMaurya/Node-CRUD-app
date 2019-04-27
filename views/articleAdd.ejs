@@ -1,0 +1,13 @@
+<%- include('header') %>
+
+<form action='/article/add' method="POST" style="width:60%; margin:auto">
+        <br/>    
+        Title : <br/>
+        <input type='text' class='form-control' name='title'><br/>
+        Body : <br/>
+        <textarea class="form-control" rows="4" name="body"></textarea>
+        <br/>
+        <button type='submit' class="btn btn-success">Post Article</button>
+        <div class="btn btn-default" style="text-transform:capitalize"><em>Author : <%= authorName%></em></div>
+</form>
+<%- include('footer') %>

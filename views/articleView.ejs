@@ -1,0 +1,24 @@
+<%- include('header') %>
+
+<div style="width:60%; margin:auto;">
+    <div class="article-title">
+        <%= title%>
+    </div>
+    <div class="article-body">
+        <%= article.body%>
+    </div>
+    <div style="text-transform:capitalize;padding-top:3px;">
+        <em>&nbsp; Author : <%=article.author_name%></em>
+    </div>
+    <br/>
+    <%if(userData){%>
+    <%if(userData._id == article.author_id){%>
+            <a class="btn btn-primary" href="/article/edit/<%= article._id%>">Edit Article</a>
+            
+            <div class="btn btn-danger delete-article" data-id="<%= article._id%>">Delete</div>
+        
+    <%} %>
+    <%}%>
+    
+</div>
+<%- include('footer') %>
